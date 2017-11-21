@@ -998,9 +998,9 @@ color: black;
 /*@media (min-width : 1200px){*/
 @media  only screen and (max-width: 1600px) {
 
-.hero_info{
+/*.hero_info{
   color: yellow;
-}
+}*/
 
 .image{
   width: 90%;
@@ -1013,9 +1013,9 @@ color: black;
 
 
 @media only screen and (max-width : 1200px){
-  .hero_info{
+  /*.hero_info{
     color: purple;
-  }
+  }*/
 
   .card_body{
     padding: 32px 0px;
@@ -1076,9 +1076,9 @@ color: black;
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-  .hero_info{
+  /*.hero_info{
     color: brown;
-  }
+  }*/
 
   #modal{
     width: 70%;
@@ -1147,9 +1147,9 @@ color: black;
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
-  .hero_info{
+  /*.hero_info{
     color: yellow;
-  }
+  }*/
 }
 
 /* Extra Small Devices, Phones */
@@ -1179,10 +1179,10 @@ input{
 .container_form{
   width: 94%;
 }
-
+/*
   .hero_info{
     color: green;
-  }
+  }*/
 
   .btn_pay{
     font-size: 16px;
@@ -1334,9 +1334,9 @@ input{
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
-  .hero_info{
+  /*.hero_info{
     color: pink;
-  }
+  }*/
 
   input{
     font-size: 14px;
