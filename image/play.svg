@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="151px" viewBox="0 0 151 151" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-2" transform="translate(-645.000000, -1683.000000)">
+            <g id="Videos" transform="translate(0.000000, 1514.000000)">
+                <g id="Play" transform="translate(645.000000, 169.000000)">
+                    <circle id="Oval-2" fill="#FF001F" opacity="0.5" cx="75.5" cy="75.5" r="75.5"></circle>
+                    <circle id="Oval-2" fill="#FF001F" cx="75.5" cy="75.5" r="61.5"></circle>
+                    <path d="M83.6295409,57.4874964 L104.395006,86.2396794 L104.395006,86.2396794 C106.335152,88.9260341 105.730229,92.6765531 103.043874,94.6166981 C102.021391,95.3551581 100.792198,95.7526228 99.5309311,95.7526228 L58,95.7526228 L58,95.7526228 C54.6862915,95.7526228 52,93.0663313 52,89.7526228 C52,88.4913557 52.3974647,87.2621624 53.1359246,86.2396794 L73.9013902,57.4874964 L73.9013902,57.4874964 C75.8415352,54.8011417 79.5920542,54.1962193 82.2784089,56.1363643 C82.7980698,56.5116749 83.2542303,56.9678355 83.6295409,57.4874964 Z" id="Triangle" fill="#FFFFFF" transform="translate(78.765685, 75.376311) rotate(90.000000) translate(-78.765685, -75.376311) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

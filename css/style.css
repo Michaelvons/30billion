@@ -1,0 +1,1097 @@
+
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url("../font/Avenir-Heavy.woff") format('woff');
+  ;
+  /*font-weight: normal;*/
+}
+
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("../font/Avenir-Black.woff") format('woff');    ;
+  /*font-weight: normal;*/
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("../font/Avenir-Medium.woff") format('woff');
+  ;
+}
+
+@font-face {
+  font-family: "Avenir-MediumOblique";
+  src: url("../font/Avenir-MediumOblique.woff") format('woff');
+  ;
+}
+
+@font-face {
+  font-family: "Avenir-Roman";
+  src: url("../font/Avenir-Roman.woff") format('woff');
+  ;
+}
+
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("../font/Avenir-Light.woff") format('woff');
+  ;
+}
+
+#video-background {
+  /*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+/*Adding Video to background*/
+
+.hero{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+}
+
+
+.logo_davido{
+  width: 100px;
+  margin:32px;
+  max-height: 50px;
+}
+
+.logo_30bg{
+  width: 50px;
+  margin: 32px;
+  max-height: 50px;
+}
+
+body{
+  margin: 0px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.hero_caption{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero_content{
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+
+.container_hero_image{
+  width: 40%;
+}
+
+.hero_image{
+  width: 100%;
+}
+
+.hero_info{
+  color: white;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+}
+
+.hero_info p{
+  margin: 0px;
+}
+
+.hero_info_date{
+  display: flex;
+  border-right: 1px solid;
+}
+
+.logo_sponsor{
+  width: 150px;
+  margin-left: 8px;
+}
+
+.hero_icon{
+  /*margin:0px 8px;*/
+}
+
+.hero_info_date_text{
+  margin-right: 16px;
+  padding: 16px;
+  text-align: center;
+  font-family: Avenir-Roman;
+  letter-spacing: 1px;
+}
+
+.container_hero_icon{
+  padding: 16px;
+}
+
+.hero_timer{
+  color: white;
+}
+
+.font_bold{
+  font-family: Avenir-Black;
+}
+
+.section_2{
+  background-image: url(../image/bg_2.png);
+  color: white;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  font-family: Avenir-Roman;
+  letter-spacing: 1px;
+  padding: 64px;
+  background-position: right;
+}
+
+.section_2_first{
+  flex-basis: 50%;
+}
+
+.section_2_second{
+  flex-basis: 50%;
+}
+
+.section_title{
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+.section_date{
+  font-size: 24px;
+}
+
+.container_ticket_class{
+  display: flex;
+  margin-top: 32px;
+}
+.ticket_class{
+  background-color: pink;
+  padding: 16px 32px;
+  font-size: 24px;
+  margin-right: 12px;
+  border-radius: 10px;
+  background: linear-gradient(164.53deg, #CC004B -201.9%, #02E2FF -11.41%, #810075 106.23%);
+}
+
+.btn_ticket{
+  padding: 16px 32px;
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+}
+
+.container_btn_ticket{
+  padding: 3px;
+  /*width: 170px;*/
+  border-radius: 80px;
+  margin-top: 64px;
+
+}
+
+.section_3{
+  color: white;
+  background-color: black;
+  display: flex;
+  padding: 32px;
+
+}
+
+.section_3_1{
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.section_3_2{
+  flex-basis:50%;
+}
+
+.thumbnail{
+  width: 340px;
+  margin-top: 32px;
+}
+.thumbnail_main{
+  background-image: url(../image/image_1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.thumbnail_1{
+  background-image: url(../image/image_2.png);
+  background-size: cover;
+  margin-left: 0px !important;
+}
+
+.thumbnail_2{
+  background-image: url(../image/image_3.png);
+  background-size: cover;
+  /*width: 50px;*/
+}
+
+.thumbnail_3{
+  background-image: url(../image/image_4.png);
+  background-size: cover;
+  margin-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.thumbnail_4{
+  background-image: url(../image/image_5.png);
+  background-size: cover;
+  width: 50px;
+  margin-bottom: 0px !important;
+}
+
+.container_thumbnail{
+  width: 340px;
+  height: 340px;
+  margin: 0px 0px 32px 32px;
+}
+
+.section_4{
+  background-color: #1A0519;
+  color: white;
+  justify-content: space-between;
+  padding: 64px;
+  display: flex;
+  font-family: Avenir-Light;
+  background-image: url(../image/bg_3.png);
+  background-position: right;
+  background-size: cover;
+}
+
+.section_4_title{
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section_4_subtitle{
+  font-size: 24px;
+  margin-bottom: 12px;
+  margin-top: 32px;
+}
+
+.section_text{
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+
+.font_heavy{
+  font-family: Avenir-Heavy;
+}
+
+.section_logo_davido{
+  width: 200px;
+  margin-right: 32px;
+}
+
+.section_logo_30bg{
+  width: 100px;
+}
+
+.section_4_2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+}
+
+.container_section_logo{
+  top: 50%;
+}
+
+.container_footer_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(-180deg, #480642 0%, #81034F 100%);
+  padding: 64px;
+}
+
+.footer_sponsor{
+  width: 100px;
+  margin-right: 4px;
+  max-height: 100px;
+}
+
+.container_footer_sponsor{
+  margin: 48px;
+}
+
+.logo_dmw{
+  width: 250px;
+}
+
+.footer_logo_nb{
+  width: 250px;
+}
+
+.thumbnail_overlay{
+  background-color: #202020;
+}
+
+.thumbnail_overlay:hover {
+  background-color: #202020;
+}
+
+/*Overlay*/
+.thumbnail_container {
+  position: relative;
+  width: 50%;
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  width: 370px;
+  height: auto;
+  margin: 16px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0.5;
+  background: #000000;
+}
+
+.thumbnail_container:hover .overlay {
+  opacity: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.thumbnail_image_2{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0;
+}
+
+.thumbnail_image_4{
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+.thumbnail_image_5{
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.thumbnail_image_3{
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.hero_timer{
+  display: flex;
+  font-family: Avenir-Roman;
+  color: #C0B9BA;
+}
+
+.container_time{
+  font-size: 48px;
+  margin: 16px;
+}
+
+.timer_text{
+  font-size: 12px;
+  font-family: Avenir-Roman;
+}
+
+.separator_time{
+  font-size: 48px;
+  margin-top: 12px;
+}
+
+.section_vid{
+  background-image: url(../image/bg_video.png);
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.play{
+  width: 100px;
+  cursor: pointer;
+}
+
+
+/*VIDEO CSS*/
+
+.lightbox {
+
+  display: none;
+
+  /** Position and style */
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+.lightbox:target {
+  /** Remove default browser outline */
+  outline: none;
+
+  /** Unhide lightbox **/
+  display: block;
+}
+
+button{
+  cursor: pointer;
+}
+
+.btn_arrow_down{
+  width: 100px;
+  margin-top: 160px;
+}
+
+/*Responsive section_date*/
+
+/*@media (min-width: 360px)and (max-width:600px) {
+  .hero_info p{
+    color: red;
+  }
+
+  .logo_30bg{
+    width: 25px;
+    margin: 16px;
+    max-height: 50px;
+  }
+
+  .logo_davido{
+    width: 50px;
+    margin: 16px;
+    max-height: 25px;
+  }
+
+  .container_hero_image{
+    width: 70%;
+  }
+
+  .hero_info_date_text{
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .hero_icon{
+    width: 24px;
+  }
+
+  .container_time{
+    font-size: 32px;
+  }
+
+  .btn_arrow_down{
+    display: none;
+  }
+
+  .section_2{
+    padding:16px;
+  }
+
+  .section_date{
+    font-size: 16px;
+  }
+
+  .section_title{
+    font-size: 24px;
+  }
+
+  .section_2_logo{
+    width: 150px;
+  }
+
+  .ticket_class{
+    font-size: 14px;
+    padding:4px 8px;
+    border-radius: 4px;
+  }
+
+  .btn_ticket{
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .section_3{
+    padding:16px 0px;
+  }
+
+  .section_4{
+    padding:16px;
+    flex-direction: column;
+  }
+
+  .section_text{
+    font-size: 16px;
+  }
+
+  .section_4_title{
+    font-size: 24px;
+  }
+
+  .section_logo_davido{
+    width: 100px;
+  }
+
+  .section_logo_30bg{
+    width: 50px;
+  }
+
+  .section_4_2{
+    justify-content: normal;
+    margin-top:24px;
+  }
+
+  .logo_dmw{
+    width: 150px;
+  }
+
+  .footer_sponsor{
+    width: 50px;
+  }
+
+  footer{
+    padding: 64px 16px;
+  }
+
+  .container_footer_sponsor{
+    margin: 48px 0px;
+  }
+
+  .footer_logo_nb{
+    width: 150px;
+  }
+
+  .section_3_1{
+    flex-basis: auto;
+  }
+
+  .play{
+    width: 50px;
+  }
+
+  .section_vid{
+    height: 200px;
+  }
+
+  .thumbnail_container{
+    width:170px;
+  }
+
+  .image{
+    width: 170px;
+  }
+
+  .section_3_2{
+    display: none;
+  }
+
+
+}
+
+@media screen  (min-width: 600px) {
+  .hero_info{
+    color: blue;
+  }
+  .logo_davido{
+    width: 55px;
+    max-height: 30px;
+  }
+
+  .container_hero_image{
+    width: 30%;
+  }
+
+  .hero_icon{
+    width: 32px;
+  }
+  .btn_arrow_down{
+    display: none;
+  }
+
+  .section_3{
+    padding: 32px;
+  }
+  .section_3_2{
+    display: none;
+  }
+  .section_3_1{
+    flex-basis: 100%;
+  }
+
+  .image{
+    width: 430px;
+  }
+
+  .section_logo_davido{
+    width: 150px;
+  }
+
+  .section_logo_30bg{
+    width: 80px;
+  }
+
+  .section_4{
+    padding: 32px;
+  }
+
+  .section_4_title{
+    font-size: 24px;
+  }
+
+  .section_text{
+    font-size: 18px;
+  }
+
+  .section_4_subtitle{
+    font-size: 20px;
+  }
+
+  .logo_dmw{
+    width: 200px;
+  }
+
+  .footer_sponsor{
+    width: 60px;
+  }
+  .footer_logo_nb{
+    width: 150px;
+  }
+}
+
+@media (max-width: 960px) {
+.hero_info{
+color: black;
+}
+.container_hero_image{
+  width: 30%;
+}
+
+.btn_arrow_down{
+  display: none;
+}
+
+.image{
+  width: 90%;
+}
+
+.section_4_title{
+  font-size: 24px;
+}
+.section_text{
+  font-size: 18px;
+}
+
+.section_4_subtitle{
+  font-size: 20px;
+}
+.section_4{
+  padding: 32px;
+}
+.section_logo_davido{
+  width: 150px;
+}
+
+.section_logo_30bg{
+  width: 80px;
+}
+
+.logo_dmw{
+  width: 150px;
+}
+
+.footer_sponsor{
+  width: 60px;
+}
+
+.footer_logo_nb{
+  width: 150px;
+}
+
+.logo_davido{
+  width: 80px;
+  max-height: 30px;
+}
+
+.logo_30bg{
+  width: 40px;
+}
+}*/
+
+
+
+/*MEDIA QUERIES*/
+/* Large Devices, Wide Screens */
+/*@media (min-width : 1200px){*/
+@media  only screen and (max-width: 1600px) {
+
+.hero_info{
+  color: yellow;
+}
+
+.image{
+  width: 90%;
+}
+.container_hero_image{
+  width: 35%;
+  margin-bottom: 350px;
+}
+}
+
+
+@media only screen and (max-width : 1200px){
+  .hero_info{
+    color: purple;
+  }
+
+  .btn_arrow_down{
+    display: none;
+  }
+
+  .image{
+    width: 90%;
+  }
+
+  .section_4{
+    padding: 32px;
+  }
+
+  .section_4_title{
+    font-size: 24px;
+  }
+
+  .section_text{
+    font-size: 16px;
+  }
+
+  .section_logo_davido{
+    width: 100px;
+  }
+
+  .section_logo_30bg{
+    width: 50px;
+  }
+
+  .logo_dmw{
+    width: 150px;
+  }
+
+  .footer_sponsor{
+    width: 50px;
+  }
+
+  .footer_logo_nb{
+    width: 150px;
+  }
+
+  .container_footer_sponsor{
+    margin: 24px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px){
+  .hero_info{
+    color: brown;
+  }
+
+.btn_arrow_down{
+  display: none;
+}
+
+.container_hero_image{
+  width: 30%;
+}
+
+.image{
+  width: 90%;
+}
+
+.section_4{
+  padding: 32px;
+}
+
+.section_4_title{
+  font-size: 20px;
+}
+
+.section_4_subtitle{
+  font-size: 20px;
+}
+
+.section_text{
+  font-size: 16px;
+}
+
+.section_logo_davido{
+  width: 100px;
+}
+
+.section_logo_30bg{
+  width: 50px;
+}
+.logo_dmw{
+  width: 150px;
+}
+
+.footer_sponsor{
+  width: 60px;
+}
+
+.footer_logo_nb{
+  width: 150px;
+}
+
+.logo_30bg{
+  width: 40px;
+}
+
+.logo_davido{
+  width: 60px;
+  max-height: 30px;
+}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+  .hero_info{
+    color: yellow;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px){
+  .hero_info{
+    color: green;
+  }
+
+  .hero_info_date_text{
+    font-size: 14px;
+  }
+
+  .hero_timer{
+    margin-top: 48px;
+  }
+  .logo_30bg{
+    width: 25px;
+    margin: 16px;
+    max-height: 50px;
+  }
+
+  .logo_davido{
+    width: 50px;
+    margin: 16px;
+    max-height: 25px;
+  }
+
+  .container_hero_image{
+    width: 70%;
+    margin-bottom: 40px;
+  }
+
+  .hero_info_date_text{
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .hero_icon{
+    width: 24px;
+  }
+
+  .container_time{
+    font-size: 32px;
+  }
+
+  .btn_arrow_down{
+    display: none;
+  }
+
+  .section_2{
+    padding:16px;
+  }
+
+  .section_date{
+    font-size: 16px;
+  }
+
+  .section_title{
+    font-size: 24px;
+  }
+
+  .section_2_logo{
+    width: 150px;
+  }
+
+  .ticket_class{
+    font-size: 14px;
+    padding:4px 8px;
+    border-radius: 4px;
+  }
+
+  .btn_ticket{
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .section_3{
+    padding:16px 0px;
+  }
+
+  .section_4{
+    padding:16px;
+    flex-direction: column;
+  }
+
+  .section_text{
+    font-size: 16px;
+  }
+
+  .section_4_title{
+    font-size: 24px;
+  }
+
+  .section_logo_davido{
+    width: 100px;
+  }
+
+  .section_logo_30bg{
+    width: 50px;
+  }
+
+  .section_4_2{
+    justify-content: normal;
+    margin-top:24px;
+  }
+
+  .logo_dmw{
+    width: 150px;
+  }
+
+  .footer_sponsor{
+    width: 50px;
+  }
+
+  footer{
+    padding: 64px 16px;
+  }
+
+  .container_footer_sponsor{
+    margin: 48px 0px;
+  }
+
+  .footer_logo_nb{
+    width: 150px;
+  }
+
+  .section_3_1{
+    flex-basis: auto;
+  }
+
+  .play{
+    width: 50px;
+  }
+
+  .section_vid{
+    height: 200px;
+  }
+
+  .thumbnail_container{
+    width:170px;
+  }
+
+  .image{
+    width: 170px;
+  }
+
+  .section_3_2{
+    display: none;
+  }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px){
+  .hero_info{
+    color: pink;
+  }
+
+  .logo_sponsor{
+    width: 100px;
+  }
+
+  .container_time{
+    font-size: 24px;
+  }
+
+  .timer_text{
+    font-size: 10px;
+  }
+
+  .thumbnail_container{
+    width: 50%;
+  }
+
+  .section_4_subtitle{
+    font-size: 20px;
+  }
+
+  .section_4_title{
+    font-size: 20px;
+  }
+
+
+}
