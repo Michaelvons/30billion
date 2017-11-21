@@ -292,7 +292,7 @@ $( document ).ready(function() {
   function timer(){
     console.log("log time here");
 
-    var timeDifference = countdown(null, 1511805600000, countdown.MONTH);
+    var timeDifference = countdown(null, 1514397600000, countdown.MONTH);
     //console.log(timeDifference);
     $('#hero_countdown_day').html(timeDifference.days);
     $('#hero_countdown_hour').html(timeDifference.hours);
