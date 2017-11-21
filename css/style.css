@@ -36,6 +36,225 @@
   ;
 }
 
+@font-face {
+   font-family: "Hind-Light";
+   src: url("../font/Hind-Light.ttf") format('truetype');
+   ;
+
+}
+
+@font-face {
+   font-family: "Hind-Regular";
+   src: url("../font/Hind-Regular.ttf") format('truetype');
+   ;
+}
+
+@font-face {
+   font-family: "Hind-Medium";
+   src: url("../font/Hind-Medium.ttf") format('truetype');
+   ;
+}
+
+@font-face {
+   font-family: "Hind-Semibold";
+   src: url("../font/Hind-SemiBold.ttf") format('truetype');
+   ;
+}
+
+@font-face {
+   font-family: "Hind-Bold";
+   src: url("../font/Hind-Bold.ttf") format('truetype');
+   ;
+}
+
+
+#modal {
+	margin: 0 auto;
+	padding: 32px;
+	width: 50%;
+	height: 50%;
+	/*background: #eee;*/
+	font-size: 80%;
+}
+
+.popup_form{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+	border-radius: 10px;
+	/*border: 1px solid #D8D8D8;*/
+
+}
+
+.error_message p{
+	color: red;
+	font-size: 16px;
+}
+
+.container_popup{
+	background-color: transparent;
+}
+
+.card_header{
+  width: 100%;
+  height: auto;
+  background-image: url(../image/bg_payment.png);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+	color: white;
+	padding-bottom:32px;
+}
+
+.logo{
+  width: 32px;
+margin: 32px 0px 8px 0px;
+}
+
+.page_title{
+  font-family: Hind-Light;
+  font-size: 14px;
+}
+
+.ticket_title{
+  font-size: 24px;
+  font-family: Hind-Light;
+  margin: 32px;
+}
+
+.ticket_price{
+	padding: 0px 32px;
+	background-image: url(../image/bg_price.png);
+	background-position: center;
+	border-radius: 10px;
+}
+
+.ticket_price_title{
+  font-size: 16px;
+  font-family: Hind-Light;
+  margin-bottom: 0px;
+}
+
+.ticket_price_amount{
+  font-family: Hind-Bold;
+  font-size: 32px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.currency{
+  font-family: Hind-Bold;
+  font-size: 20px;
+}
+
+.card_body{
+	font-family: Hind-Light;
+	color: #4A4A4A;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+.select-style {
+	padding: 0;
+	margin: 8px;
+	width: 300px;
+	border-radius: 50px;
+	overflow: hidden;
+	background: #ededed url("../image/arrow.svg") no-repeat 90% 50%;
+}
+
+.select-style select {
+	padding: 16px;
+	width: 130%;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 16px;
+}
+
+/*.select-style select:focus {
+    outline: none;
+}*/
+
+input{
+	font-size: 16px;
+	color: #565656;
+	border-radius: 50px;
+	padding: 16px;
+	border: none;
+	margin: 8px;
+	background-color: #a7a7a733;
+	width: 195px;
+}
+
+.btn_pay{
+	background-color: #07B970;
+	font-size: 20px;
+	color: white;
+	border-radius: 50px;
+	padding: 14px;
+	border: none;
+	margin: 8px;
+	width: 230px;
+	font-family: Hind-Semibold;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.btn_icon{
+	width: 18px;
+}
+
+.form_row_1{
+	display: flex;
+}
+
+.input_fullwidth{
+	width: 435px;
+}
+
+.container_form{
+	width: 64%;
+}
+
+.form_row_3{
+	display: flex;
+}
+
+.container_selector_ticket{
+	flex-basis: 60%;
+}
+
+.container_selector_quantity{
+	flex-basis: 40%
+}
+
+.form_row_4{
+	display: flex;
+	align-items: center;
+}
+
+
 #video-background {
   /*  making the video fullscreen  */
   position: fixed;

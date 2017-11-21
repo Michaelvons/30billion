@@ -230,7 +230,115 @@ document.getElementById('open_image_4').onclick = openPhotoSwipe4;
 document.getElementById('open_image_5').onclick = openPhotoSwipe5;
 //document.getElementById('play_video').onclick = openPhotoSwipevid;
 
+function payWithPaystack(){
+  var handler = PaystackPop.setup({
+    key: 'pk_test_8493ccfdee6b3371c15bbf715d88521181d9a59b',
+    email: '30billion@email.com',
+    ticket: 'VVIP',
+    quantity:2,
+    amount: 10000,
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    metadata: {
+       custom_fields: [
+          {
+              display_name: "Mobile Number",
+              variable_name: "mobile_number",
+              value: "+2348012345678",
+              ticket: 'VVIP',
+              quantity:2
+          }
+       ]
+    },
+    callback: function(response){
+        alert('success. transaction ref is ' + response.reference);
+    },
+    onClose: function(){
+        alert('window closed');
+    }
+  });
+  handler.openIframe();
+}
+
 $( document ).ready(function() {
+
+
+
+// MODAL POPUP
+  $('#open_modal').magnificPopup({
+    type: 'inline',
+    items: {src: '#modal'},
+    preloader: false,
+    modal: true
+  });
+
+  $( "#modal_close" ).click(function() {
+    // alert( "Handler for .click() called." );
+    $.magnificPopup.close();
+  });
+
+
+
+
+  $('.error_message').hide();
+
+  // $('#selector_ticket').click(function(){
+  //   console.log("Send btn clicked");
+  // //console.log($('#selector_ticket').val());
+  // var obj = {};
+  // obj = $('#selector_ticket').val();
+  // var newobj ={id:"911", name:"emma"}
+  // console.log(obj);
+  //   console.log(newobj.id);
+  // console.log(obj.id);
+  // });
+
+  $("#selector_quantity").change(function(){
+    console.log("quantity selected");
+    var quantity = $(selector_quantity).find(":selected").data("value").quantity
+    var price = $(selector_ticket).find(":selected").data("value").price
+
+    calc(quantity, price);
+    function calc(quantity, price) {
+      total = quantity * price;
+      $("#total").html( ' '+ total.toLocaleString() );
+      // console.log("Comma separated is - " + total.toLocaleString());
+      // $("#ticketClass").html( ' '+ ticketClass );
+      $("#quantity").html( ' '+ quantity );
+    //  $("#btn_send").html('Pay - ' + total );
+    }
+  });
+
+  $("#selector_ticket").change(function(){
+    console.log($(this).find(":selected").data("value").id);
+    console.log($(this).find(":selected").data("value").ticketClass);
+    console.log($(this).find(":selected").data("value").price);
+    console.log($(this).find(":selected").data("value").isAvailable);
+    console.log($(selector_quantity).find(":selected").data("value").quantity);
+
+    var ticketClass = $(this).find(":selected").data("value").ticketClass;
+    var isAvailable = $(this).find(":selected").data("value").isAvailable;
+    var quantity = $(selector_quantity).find(":selected").data("value").quantity
+    var price = $(selector_ticket).find(":selected").data("value").price
+
+    calc(quantity, price);
+    function calc(quantity, price) {
+      total = quantity * price;
+      $("#total").html( ' '+ total.toLocaleString() );
+      $("#ticketClass").html( ' '+ ticketClass );
+      $("#quantity").html( ' '+ quantity );
+
+    //  $("#btn_send").html('Pay - ' + total );
+    }
+
+    if(!isAvailable){
+      console.log("It is false. Show table booking");
+      $('.error_message').show();
+    }else {
+      $('.error_message').hide();
+    }
+    //  alert($(this).find(":selected").data("value").age);
+  });
+
 //  console.log( "ready!" );
 setInterval(timer,1000);
 function timer(){
@@ -266,10 +374,10 @@ var timeDifference = countdown(null, 1511805600000, countdown.MONTH);
   });
 
   //Buy ticket
-  $(".btn_ticket").click(function(){
-    window.open('http://www.nairabox.com:9123/events/single.php?id=5a0d75d48ead0e1e618b4580');
-    console.log("Open window clicked");
-});
+//   $(".btn_ticket").click(function(){
+//     window.open('http://www.nairabox.com:9123/events/single.php?id=5a0d75d48ead0e1e618b4580');
+//     console.log("Open window clicked");
+// });
 
 //animate Buy Ticket button
 $('#arrow_down').addClass('animated bounce infinite');

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Payment" transform="translate(-100.000000, -661.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Pay-Button" transform="translate(70.000000, 642.000000)">
+                <path d="M45,29 L45,25 C45,21.8 42.4,19 39,19 C35.6,19 33,21.8 33,25 L33,29 L31,29 L31,29 C30.4477153,29 30,29.4477153 30,30 L30,40 L30,40 C30,40.5522847 30.4477153,41 31,41 L47,41 L47,41 C47.5522847,41 48,40.5522847 48,40 L48,30 L48,30 C48,29.4477153 47.5522847,29 47,29 L45,29 Z M41,29 L37,29 L37,25 C37,23.8 37.8,23 39,23 C40.2,23 41,23.8 41,25 L41,29 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
