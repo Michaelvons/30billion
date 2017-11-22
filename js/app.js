@@ -10,11 +10,11 @@ gtag('config', 'UA-109935880-1');
 
 // GALLERY
 // TODO: Rewrite openPhotoSwipe as a function accepting parameters.
-function validateEmail(mail)   
-{  
- if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }  
-	return false;  
-}  
+function validateEmail(mail)
+{
+ if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }
+	return false;
+}
 function success(msg){
 	dur = 5000;
 	if(msg.length > 40){
@@ -183,7 +183,7 @@ var openPhotoSwipe1 = function() {
   // build items array
   var items = [
     {
-      src: 'image/image_1.png',
+      src: 'image/image_1.jpg',
       w: 1348,
       h: 1348
     }
@@ -243,28 +243,28 @@ function payWithPaystack(){
     var price = $(selector_ticket).find(":selected").data("value").price
 	var id = $(selector_ticket).find(":selected").data("value").id
 	var ticketName = $(selector_ticket).find(":selected").data("value").ticketClass
-	
-	if($('#fname').val() == ""){ 
+
+	if($('#fname').val() == ""){
 		error("Please enter your full name"); return;
 	}
-	if($('#fphone').val() == ""){ 
+	if($('#fphone').val() == ""){
 		error("Please enter your Phone number"); return;
 	}
-	if($('#femail').val() == ""){ 
+	if($('#femail').val() == ""){
 		error("Please enter your email address"); return;
 	}
-	
+
 	if(quantity == "0"){
 		error("Please select a valid quantity"); return;
 	}
 	if(id == "oo"){
 		error("Please select a valid Ticket"); return;
 	}
-	
+
 	if(validateEmail($('#femail').val()) === false){
 		error("Please enter a valid email address"); return;
 	}
-	
+
 	data = {
 		userName: $('#fname').val(),
 		userPhone: $('#fphone').val(),
@@ -302,9 +302,9 @@ function payWithPaystack(){
       ]
     },
     callback: function(response){
-      
+
 	  data.transactionID = response.reference;
-	  
+
 	  $.post("https://www.nairabox.com/webticket/event.php", data, function(ret){
 		if(ret.status == 200){
 			success(ret.message);

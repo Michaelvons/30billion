@@ -1039,16 +1039,16 @@ color: black;
 /*@media (min-width : 1200px){*/
 @media  only screen and (max-width: 1600px) {
 
-.hero_info{
+/*.hero_info{
   color: yellow;
-}
+}*/
 
 .image{
   width: 90%;
 }
 .container_hero_image{
-  width: 35%;
-  margin-bottom: 350px;
+  width: 30%;
+  /*margin-bottom: 350px;*/
 }
 
 }
@@ -1056,9 +1056,9 @@ color: black;
 
 @media only screen and (max-width : 1200px){
 
-  .hero_info{
+  /*.hero_info{
     color: purple;
-  }
+  }*/
 
   .card_body{
     padding: 32px 0px;
@@ -1121,12 +1121,12 @@ color: black;
 @media only screen and (max-width : 992px){
 
 .hero{
-  /*height: 80vh;*/
+  height: 90vh;
 }
 
-  .hero_info{
+  /*.hero_info{
     color: brown;
-  }
+  }*/
 
 .container_ticket_class{
   width: 500px;
@@ -1205,8 +1205,8 @@ color: black;
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
   .hero_info{
-    color: yellow;
-    /*height: 80vh;*/
+    /*color: yellow;*/
+    /*height: 90vh;*/
   }
   #video-background{
     display: none;
@@ -1216,6 +1216,7 @@ color: black;
     background-image: url(../image/bg_mobile.png);
     background-size: cover;
     background-position: center;
+    height: 90vh;
   }
 }
 
@@ -1265,9 +1266,9 @@ input{
   width: 94%;
 }
 
-  .hero_info{
+  /*.hero_info{
     color: green;
-  }
+  }*/
 
   .container_ticket_class{
     width: 300px;
@@ -1433,12 +1434,12 @@ input{
     background-image: url(../image/bg_mobile.png);
     background-size: cover;
     background-position: center;
-    /*height: 80vh;*/
+    height: 90vh;
   }
 
-  .hero_info{
+  /*.hero_info{
     color: pink;
-  }
+  }*/
 
   input{
     font-size: 14px;
