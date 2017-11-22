@@ -67,6 +67,17 @@
    ;
 }
 
+.ticket_class p{
+  margin: 0px;
+}
+
+.ticket_class_price{
+  font-family: Avenir-Roman;
+  font-size: 14px;
+  white-space: nowrap;
+overflow: hidden;
+
+}
 
 #modal {
 	margin: 0 auto;
@@ -400,6 +411,7 @@ header{
 .container_ticket_class{
   display: flex;
   margin-top: 32px;
+
 }
 .ticket_class{
   background-color: pink;
@@ -716,6 +728,34 @@ button{
 .btn_arrow_down{
   width: 100px;
   margin-top: 160px;
+  cursor: pointer;
+  position: absolute;
+  left: 0; right: 0;
+  margin: auto;
+  bottom: 20px;
+  animation-name: arrow_animation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow_animation {
+	0% {bottom: 20px;}
+	50% {bottom: 60px;}
+	100% {bottom: 20px;}
+}
+
+.btn_ticket:hover{
+  opacity: .9;
+  background: #751582;
+  color: white;
+  /*box-shadow: -2px 9px 72px -22px rgba(250,108,250,1);*/
+}
+
+.ticket_class:hover{
+  background-color: yellow;
+  cursor: pointer;
+background: linear-gradient(157.06deg, #810075 -202.23%, #810075 -40.48%, #02E2FF 59.4%);
+
 }
 
 /*Responsive section_date*/
@@ -993,14 +1033,15 @@ color: black;
 
 
 
+
 /*MEDIA QUERIES*/
 /* Large Devices, Wide Screens */
 /*@media (min-width : 1200px){*/
 @media  only screen and (max-width: 1600px) {
 
-/*.hero_info{
+.hero_info{
   color: yellow;
-}*/
+}
 
 .image{
   width: 90%;
@@ -1009,13 +1050,15 @@ color: black;
   width: 35%;
   margin-bottom: 350px;
 }
+
 }
 
 
 @media only screen and (max-width : 1200px){
-  /*.hero_info{
+
+  .hero_info{
     color: purple;
-  }*/
+  }
 
   .card_body{
     padding: 32px 0px;
@@ -1076,9 +1119,23 @@ color: black;
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-  /*.hero_info{
+
+.hero{
+  /*height: 80vh;*/
+}
+
+  .hero_info{
     color: brown;
-  }*/
+  }
+
+.container_ticket_class{
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.ticket_class{
+  margin: 12px 12px 12px 0px;
+}
 
   #modal{
     width: 70%;
@@ -1147,13 +1204,36 @@ color: black;
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
-  /*.hero_info{
+  .hero_info{
     color: yellow;
-  }*/
+    /*height: 80vh;*/
+  }
+  #video-background{
+    display: none;
+  }
+
+  .hero{
+    background-image: url(../image/bg_mobile.png);
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
+
+
+  #video-background{
+    display: none;
+  }
+
+  .hero{
+    background-image: url(../image/bg_mobile.png);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+  }
+
 #modal{
   padding: 0px;
   width: 100%;
@@ -1165,6 +1245,11 @@ color: black;
 
 .input_fullwidth{
   width: 280px;
+}
+
+.container_btn_ticket{
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 input{
@@ -1179,10 +1264,15 @@ input{
 .container_form{
   width: 94%;
 }
-/*
+
   .hero_info{
     color: green;
-  }*/
+  }
+
+  .container_ticket_class{
+    width: 300px;
+    flex-wrap: wrap;
+  }
 
   .btn_pay{
     font-size: 16px;
@@ -1249,11 +1339,12 @@ input{
     font-size: 14px;
     padding:4px 8px;
     border-radius: 4px;
+    margin: 8px 8px 8px 0px;
   }
 
   .btn_ticket{
-    padding: 10px 16px;
-    font-size: 14px;
+    padding: 14px 20px;
+  font-size: 16px;
   }
 
   .section_3{
@@ -1334,9 +1425,20 @@ input{
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
-  /*.hero_info{
+  #video-background{
+    display: none;
+  }
+
+  .hero{
+    background-image: url(../image/bg_mobile.png);
+    background-size: cover;
+    background-position: center;
+    /*height: 80vh;*/
+  }
+
+  .hero_info{
     color: pink;
-  }*/
+  }
 
   input{
     font-size: 14px;

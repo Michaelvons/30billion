@@ -1,4 +1,13 @@
 
+
+
+//GOOGLE ANALYTICS
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-109935880-1');
+
 // GALLERY
 // TODO: Rewrite openPhotoSwipe as a function accepting parameters.
 
@@ -227,12 +236,30 @@ function payWithPaystack(){
   handler.openIframe();
 }
 
-$( document ).ready(function() {
 
+//JQUERY
+$( document ).ready(function() {
+  //SCROLL ANIMATION
+    $( "#arrow_down" ).click(function() {
+  var scroll = new SmoothScroll();
+  var anchor = document.querySelector( '#sroll_to_ticket' );
+  //scroll.animateScroll( anchor );
+  var options = { speed: 500, easing: 'easeOutQuad' };
+scroll.animateScroll( anchor, options );
+});
 
 
   // MODAL POPUP
   $('#open_modal').magnificPopup({
+    type: 'inline',
+    items: {src: '#modal'},
+    preloader: false,
+    modal: true
+  });
+
+
+  //TICKET CLASS BUTTON TO OPEN MODAL
+  $('.ticket_class').magnificPopup({
     type: 'inline',
     items: {src: '#modal'},
     preloader: false,
@@ -294,10 +321,15 @@ $( document ).ready(function() {
 
     var timeDifference = countdown(null, 1514397600000, countdown.MONTH);
     //console.log(timeDifference);
-    $('#hero_countdown_day').html(timeDifference.days);
-    $('#hero_countdown_hour').html(timeDifference.hours);
-    $('#hero_countdown_minute').html(timeDifference.minutes);
-    $('#hero_countdown_second').html(timeDifference.seconds);
+    var days = timeDifference.days < 10 ? "0" + timeDifference.days : timeDifference.days;
+    var hours = timeDifference.hours < 10 ? "0" + timeDifference.hours : timeDifference.hours;
+    var minutes = timeDifference.minutes < 10 ? "0" + timeDifference.minutes : timeDifference.minutes;
+    var seconds = timeDifference.secondsseconds < 10 ? "0" + timeDifference.seconds : timeDifference.seconds;
+
+    $('#hero_countdown_day').html(days);
+    $('#hero_countdown_hour').html(hours);
+    $('#hero_countdown_minute').html(minutes);
+    $('#hero_countdown_second').html(seconds);
   }
 
   //VIDEO POPUP
@@ -321,6 +353,6 @@ $( document ).ready(function() {
 
   });
 
-  $('#arrow_down').addClass('animated pulse infinite');
+  // $('#arrow_down').addClass('animated pulse infinite');
 
 });
