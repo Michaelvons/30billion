@@ -422,7 +422,7 @@ scroll.animateScroll( anchor, options );
     var days = timeDifference.days < 10 ? "0" + timeDifference.days : timeDifference.days;
     var hours = timeDifference.hours < 10 ? "0" + timeDifference.hours : timeDifference.hours;
     var minutes = timeDifference.minutes < 10 ? "0" + timeDifference.minutes : timeDifference.minutes;
-    var seconds = timeDifference.secondsseconds < 10 ? "0" + timeDifference.seconds : timeDifference.seconds;
+    var seconds = timeDifference.seconds < 10 ? "0" + timeDifference.seconds : timeDifference.seconds;
 
     $('#hero_countdown_day').html(days);
     $('#hero_countdown_hour').html(hours);
