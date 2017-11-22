@@ -10,12 +10,21 @@ gtag('config', 'UA-109935880-1');
 
 // GALLERY
 // TODO: Rewrite openPhotoSwipe as a function accepting parameters.
+<<<<<<< HEAD
 function validateEmail(mail)
 {
  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }
 	return false;
 }
 function success(msg){
+=======
+function validateEmail(mail)
+{
+ if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }
+	return false;
+}
+function success(msg, id){
+>>>>>>> e7b794a05a5056dccdbdc3633f11e8c17fbce758
 	dur = 5000;
 	if(msg.length > 40){
 		dur = 10000;
@@ -26,9 +35,9 @@ function success(msg){
 		}
 		msg = mmgs;
 	}
-	$.notify(msg, {position:"top center", className:'success', autoHideDelay: dur});
+	$('#' + id).notify(msg, {position:"top center", className:'success', autoHideDelay: dur});
 }
-function error(msg){
+function error(msg, id){
 	dur = 5000;
 	if(msg.length > 40){
 		dur = 10000;
@@ -39,7 +48,7 @@ function error(msg){
 		}
 		msg = mmgs;
 	}
-	$.notify(msg, {position:"top center", className:'error', autoHideDelay: dur});
+	$('#' + id).notify(msg, {position:"top center", className:'error', autoHideDelay: dur});
 }
 
 var openPhotoSwipe = function() {
@@ -245,24 +254,24 @@ function payWithPaystack(){
 	var ticketName = $(selector_ticket).find(":selected").data("value").ticketClass
 
 	if($('#fname').val() == ""){
-		error("Please enter your full name"); return;
+		error("Please enter your full name", "fname"); return;
 	}
 	if($('#fphone').val() == ""){
-		error("Please enter your Phone number"); return;
+		error("Please enter your Phone number", "fphone"); return;
 	}
 	if($('#femail').val() == ""){
-		error("Please enter your email address"); return;
+		error("Please enter your email address", "femail"); return;
 	}
 
 	if(quantity == "0"){
-		error("Please select a valid quantity"); return;
+		error("Please select a valid quantity", "selector_quantity"); return;
 	}
 	if(id == "oo"){
-		error("Please select a valid Ticket"); return;
+		error("Please select a valid Ticket", "selector_ticket"); return;
 	}
 
 	if(validateEmail($('#femail').val()) === false){
-		error("Please enter a valid email address"); return;
+		error("Please enter a valid email address", "femail"); return;
 	}
 
 	data = {
@@ -307,9 +316,9 @@ function payWithPaystack(){
 
 	  $.post("https://www.nairabox.com/webticket/event.php", data, function(ret){
 		if(ret.status == 200){
-			success(ret.message);
+			success(ret.message, "fm_row2");
 		}else{
-			error(ret.message);
+			error(ret.message, "fm_row2");
 		}
 	  });
     },
