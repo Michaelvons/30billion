@@ -10,6 +10,37 @@ gtag('config', 'UA-109935880-1');
 
 // GALLERY
 // TODO: Rewrite openPhotoSwipe as a function accepting parameters.
+function validateEmail(mail)   
+{  
+ if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }  
+	return false;  
+}  
+function success(msg){
+	dur = 5000;
+	if(msg.length > 40){
+		dur = 10000;
+		mmgs = "";
+		pts = msg.match(/.{1,40}/g);
+		for(i = 0; i < pts.length; i++){
+			mmgs += pts[i] + "\r\n";
+		}
+		msg = mmgs;
+	}
+	$.notify(msg, {position:"top center", className:'success', autoHideDelay: dur});
+}
+function error(msg){
+	dur = 5000;
+	if(msg.length > 40){
+		dur = 10000;
+		mmgs = "";
+		pts = msg.match(/.{1,40}/g);
+		for(i = 0; i < pts.length; i++){
+			mmgs += pts[i] + "<br />";
+		}
+		msg = mmgs;
+	}
+	$.notify(msg, {position:"top center", className:'error', autoHideDelay: dur});
+}
 
 var openPhotoSwipe = function() {
   var pswpElement = document.querySelectorAll('.pswp')[0];
@@ -208,29 +239,82 @@ document.getElementById('open_image_5').onclick = openPhotoSwipe5;
 // PAYSTACK INTEGRATION
 
 function payWithPaystack(){
+  var quantity = $(selector_quantity).find(":selected").data("value").quantity
+    var price = $(selector_ticket).find(":selected").data("value").price
+	var id = $(selector_ticket).find(":selected").data("value").id
+	var ticketName = $(selector_ticket).find(":selected").data("value").ticketClass
+	
+	if($('#fname').val() == ""){ 
+		error("Please enter your full name"); return;
+	}
+	if($('#fphone').val() == ""){ 
+		error("Please enter your Phone number"); return;
+	}
+	if($('#femail').val() == ""){ 
+		error("Please enter your email address"); return;
+	}
+	
+	if(quantity == "0"){
+		error("Please select a valid quantity"); return;
+	}
+	if(id == "oo"){
+		error("Please select a valid Ticket"); return;
+	}
+	
+	if(validateEmail($('#femail').val()) === false){
+		error("Please enter a valid email address"); return;
+	}
+	
+	data = {
+		userName: $('#fname').val(),
+		userPhone: $('#fphone').val(),
+		userEmail: $('#femail').val(),
+		ticketClass: id,
+		ticketCount: quantity,
+		amount: quantity * price
+	};
   var handler = PaystackPop.setup({
-    key: 'pk_test_8493ccfdee6b3371c15bbf715d88521181d9a59b',
-    email: '30billion@email.com',
-    ticket: 'VVIP',
-    quantity:2,
-    amount: 10000,
-    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    key: 'pk_live_41ed986b3773595273e995adf63505fa657e6bfc',
+    email: data.userEmail,
+    amount: data.amount * 100, // 20000
     metadata: {
       custom_fields: [
         {
-          display_name: "Mobile Number",
+          display_name: "Customer Name",
+          variable_name: "customer_name",
+          value: data.userName
+        },
+		{
+		  display_name: "Customer Phone",
           variable_name: "mobile_number",
-          value: "+2348012345678",
-          ticket: 'VVIP',
-          quantity:2
-        }
+          value: data.userPhone,
+		},
+		{
+		  display_name: "Ticket Class",
+          variable_name: "ticket_class",
+          value: ticketName,
+		},
+		{
+		  display_name: "Ticket Quantity",
+          variable_name: "ticket_quantity",
+          value: data.ticketCount,
+		}
       ]
     },
     callback: function(response){
-      alert('success. transaction ref is ' + response.reference);
+      
+	  data.transactionID = response.reference;
+	  
+	  $.post("https://www.nairabox.com/webticket/event.php", data, function(ret){
+		if(ret.status == 200){
+			success(ret.message);
+		}else{
+			error(ret.message);
+		}
+	  });
     },
     onClose: function(){
-      alert('window closed');
+      //
     }
   });
   handler.openIframe();
@@ -267,7 +351,8 @@ scroll.animateScroll( anchor, options );
   });
 
   //BUTTON TO CLOSE MODAL
-  $( "#modal_close" ).click(function() {
+  $( "#modal_close" ).click(function(evt) {
+	evt.preventDefault();
     // alert( "Handler for .click() called." );
     $.magnificPopup.close();
   });
@@ -317,9 +402,9 @@ scroll.animateScroll( anchor, options );
   //COUNTDOWN TIMER TO EVENT
   setInterval(timer,1000);
   function timer(){
-    console.log("log time here");
+    //console.log("log time here");
 
-    var timeDifference = countdown(null, 1514397600000, countdown.MONTH);
+    var timeDifference = countdown(null, new Date("2017-12-27"), countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
     //console.log(timeDifference);
     var days = timeDifference.days < 10 ? "0" + timeDifference.days : timeDifference.days;
     var hours = timeDifference.hours < 10 ? "0" + timeDifference.hours : timeDifference.hours;
