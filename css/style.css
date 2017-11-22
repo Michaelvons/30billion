@@ -67,6 +67,11 @@
    ;
 }
 
+/*
+.disabled{
+  background-color: #9B9B9B;
+}*/
+
 .ticket_class p{
   margin: 0px;
 }
@@ -230,6 +235,10 @@ input{
 	font-family: Hind-Semibold;
 	display: flex;
 	justify-content: space-evenly;
+}
+
+.btn_pay:disabled{
+  background-color: #9B9B9B;
 }
 
 .btn_icon{
