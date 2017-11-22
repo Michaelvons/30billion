@@ -8,27 +8,23 @@ gtag('js', new Date());
 
 gtag('config', 'UA-109935880-1');
 
-
-//CHECK BROWSER
-function RenderVideoPlayer() {
-  var videoSpace = document.getElementById("video-space");
-		if (window.innerWidth >= 720) {
-      videoSpace.innerHTML = '<video autoplay loop id="video-background" muted plays-inline><source src="image/clip.mp4" type="video/mp4"></video>';
-    }
-		else videoSpace.innerHTML = "";
-}
-
-
 // GALLERY
 // TODO: Rewrite openPhotoSwipe as a function accepting parameters.
-
-
+// <<<<<<< HEAD
+function validateEmail(mail)
+{
+ if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }
+	return false;
+}
+function success(msg){
+// =======
 function validateEmail(mail)
 {
  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){  return true;  }
 	return false;
 }
 function success(msg, id){
+// >>>>>>> e7b794a05a5056dccdbdc3633f11e8c17fbce758
 	dur = 5000;
 	if(msg.length > 40){
 		dur = 10000;
